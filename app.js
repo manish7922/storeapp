@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-const port = 2410;
+const port = process.env.PORT || 2410;
 app.listen(port, () => console.log(`node app listening on port ${port}!`));
 let { shopData } = require("./data");
 let { productData } = require("./data");
